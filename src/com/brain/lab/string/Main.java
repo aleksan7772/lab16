@@ -11,7 +11,7 @@ public class Main {
         String s = new String("s");
         String[] arr = new String[3];
         String b = new String(literal.getBytes());
-        StringBuilder builder = new StringBuilder("a,b,c");
+        StringBuilder builder = new StringBuilder();
         String str = new String(builder);
         String fruits = "Апельсин,Яблоко,Гранат,Груша";
         System.out.println("Вариант 1: " + fruits);
@@ -31,9 +31,16 @@ public class Main {
         System.out.println("После: " + Arrays.toString(s3.trim().split("_")));
         System.out.println("Ставим пробелы " + s3);
         System.out.println(s3.replace('_',' ').trim());
-        builder = new StringBuilder(fruits.concat(s3).trim().replace('_',' '));
-        System.out.println(builder);
-        System.out.println(builder.reverse());
+//        builder = new StringBuilder(fruits.concat(s3).trim().replace('_',' '));
+//        System.out.println(builder);
+//        System.out.println(builder.reverse());
+        System.out.println();
+        builder.append("Апельсин, Яблоко, Гранат,\n Груша");
+        builder.append("\n").append(s3.trim().replace("_"," "));
+        builder.reverse();
+        String resoult = builder.toString();
+        System.out.println(resoult);
+        builder.reverse();
     }
 
 }
